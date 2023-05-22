@@ -6,6 +6,7 @@ function Layout() {
   return (
     <>
       <Navbar />
+      <hr />
       <Outlet />
     </>
   );
