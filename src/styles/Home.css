@@ -1,0 +1,22 @@
+.metrics-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  background-color: #933b3b;
+  justify-content: center;
+}
+
+.metric-container {
+  color: #fff;
+}
+
+.metric-container:nth-child(odd) {
+  background: #f07272;
+}
+
+.metric-container:nth-child(even) {
+  background: #933b3b;
+}
+
+.metric-about {
+    padding-left: 50px;
+}

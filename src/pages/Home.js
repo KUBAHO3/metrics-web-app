@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { FaRegArrowAltCircleRight } from 'react-icons/fa';
 import { fetchApiData } from '../redux/metrics/metricsSlice';
+import '../styles/Home.css';
 
 function Home() {
   const dispatch = useDispatch();
@@ -18,7 +20,22 @@ function Home() {
   }
 
   return (
-    <div>{JSON.stringify(metrics[2])}</div>
+    <div className="metrics-container">
+      {metrics.map((item) => (
+        <div key={item.id} className="metric-container">
+          <div className="detail-button">
+            {' '}
+            <FaRegArrowAltCircleRight />
+            {' '}
+          </div>
+          <div className="image-container"><img className="metric-image" src={item.imageUrl} alt={item.image_id} /></div>
+          <div className="metric-about">
+            <h3 className="metric-title">{item.nameEU}</h3>
+            <h3 className="metric-numbers">{item.id}</h3>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }
 
