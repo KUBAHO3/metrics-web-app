@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchDetailData } from '../redux/details/detailsSlice';
 import '../styles/Detail.css';
@@ -7,10 +8,11 @@ function Detail() {
   const dispatch = useDispatch();
   const detailData = useSelector((store) => store.detailData.detailData);
   const loading = useSelector((store) => store.detailData.isLoading);
+  const { id } = useParams();
 
   useEffect(() => {
-    dispatch(fetchDetailData());
-  }, [dispatch]);
+    dispatch(fetchDetailData(id));
+  }, [dispatch, id]);
 
   if (loading === true) {
     return (
