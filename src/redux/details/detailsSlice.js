@@ -8,7 +8,7 @@ const initialState = {
 
 export const fetchDetailData = createAsyncThunk(
   'metrics/detailData',
-  async (id = 3) => {
+  async (id) => {
     try {
       const response = await axios.get(`https://acnhapi.com/v1/art/${id}`);
       const {

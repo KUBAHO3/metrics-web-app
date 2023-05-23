@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaRegArrowAltCircleRight } from 'react-icons/fa';
 import { fetchApiData } from '../redux/metrics/metricsSlice';
+import { fetchDetailData } from '../redux/details/detailsSlice';
 import '../styles/Home.css';
 
 function Home() {
@@ -12,6 +14,11 @@ function Home() {
   useEffect(() => {
     dispatch(fetchApiData());
   }, [dispatch]);
+
+  const clickHandler = (e, id) => {
+    e.preventDefault();
+    dispatch(fetchDetailData(id));
+  };
 
   if (loading === false) {
     return (
@@ -24,9 +31,13 @@ function Home() {
       {metrics.map((item) => (
         <div key={item.id} className="metric-container">
           <div className="detail-button">
-            {' '}
-            <FaRegArrowAltCircleRight />
-            {' '}
+            <span role="button" tabIndex={0} id={item.id} onClick={(e) => clickHandler(e, item.id)} onKeyDown={(e) => clickHandler(e)}>
+              <Link to={`details/${item.id}`}>
+                {' '}
+                <FaRegArrowAltCircleRight />
+                {' '}
+              </Link>
+            </span>
           </div>
           <div className="image-container"><img className="metric-image" src={item.imageUrl} alt={item.image_id} /></div>
           <div className="metric-about">
