@@ -2,8 +2,8 @@ import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
-import Home from '../pages/Home';
 import Adapter from '@cfaester/enzyme-adapter-react-18';
+import Home from '../pages/Home';
 
 Enzyme.configure({ adapter: new Adapter() });
 

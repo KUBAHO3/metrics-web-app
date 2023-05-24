@@ -9,7 +9,7 @@ describe('Navbar component', () => {
     const { getByText, getByLabelText } = render(
       <Router>
         <Navbar />
-      </Router>
+      </Router>,
     );
     expect(getByText('Vintage Collections')).toBeInTheDocument();
     expect(getByLabelText('Back')).toBeInTheDocument();
@@ -20,7 +20,7 @@ describe('Navbar component', () => {
     const { getByLabelText } = render(
       <Router>
         <Navbar navigate={navigateMock} />
-      </Router>
+      </Router>,
     );
     fireEvent.click(getByLabelText('Back'));
     expect(navigateMock).not.toHaveBeenCalled();

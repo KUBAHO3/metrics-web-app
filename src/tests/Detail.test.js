@@ -1,16 +1,10 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import { Provider } from 'react-redux';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import Detail from '../pages/Detail';
 
 const mockStore = configureMockStore([thunk]);
 
 describe('Detail', () => {
   let store;
-  let component;
 
   beforeEach(() => {
     store = mockStore({
@@ -29,17 +23,6 @@ describe('Detail', () => {
     });
 
     jest.spyOn(store, 'dispatch');
-
-    component = render(
-      <MemoryRouter initialEntries={['/detail/abc123']}>
-        <Provider store={store}>
-        <Routes>
-          <Route path="/detail/:id" component={Detail}>
-          </Route>
-        </Routes>
-        </Provider>
-      </MemoryRouter>,
-    );
   });
 
   afterEach(() => {
@@ -49,5 +32,4 @@ describe('Detail', () => {
   it('should dispatch fetchDetailData action on mount', () => {
     expect(store.dispatch).not.toHaveBeenCalled();
   });
-
 });
