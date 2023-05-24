@@ -47,7 +47,7 @@ function Home() {
         <input
           className="search-input"
           type="text"
-          placeholder="search here"
+          placeholder="Type to search here"
           onChange={(e) => searchItems(e.target.value)}
         />
       </div>

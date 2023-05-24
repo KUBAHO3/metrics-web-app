@@ -23,7 +23,7 @@ function Detail() {
     <>
       <div className="detailsContainer">
         <div className="imgContainer displays">
-          <img src={detailData.imageUrl} alt={detailData.image_id} />
+          <img className="detail-image" src={detailData.imageUrl} alt={detailData.image_id} />
         </div>
         <table>
           <tbody>
