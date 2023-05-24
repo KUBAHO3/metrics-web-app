@@ -1,7 +1,6 @@
 .metrics-container {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  background-color: #933b3b;
   justify-content: center;
 }
 
@@ -10,13 +9,50 @@
 }
 
 .metric-container:nth-child(odd) {
-  background: #f07272;
+  background: #ff8585;
 }
 
 .metric-container:nth-child(even) {
-  background: #933b3b;
+  background: #9f3f3f;
 }
 
 .metric-about {
   padding-left: 50px;
+}
+
+.search-input {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  padding: 10px;
+  width: 100%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.metric-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 700px){
+  .metrics-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 425px){
+  .metrics-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+  }
 }

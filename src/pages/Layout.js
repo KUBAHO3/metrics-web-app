@@ -4,11 +4,11 @@ import Navbar from '../components/Navbar';
 
 function Layout() {
   return (
-    <>
+    <div className="page-wraper">
       <Navbar />
       <hr />
       <Outlet />
-    </>
+    </div>
   );
 }
 

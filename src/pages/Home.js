@@ -45,15 +45,13 @@ function Home() {
     <>
       <div className="metrics-container">
         <input
-          className="displays inputCmp"
+          className="search-input"
           type="text"
           placeholder="search here"
           onChange={(e) => searchItems(e.target.value)}
         />
       </div>
-
-      <h2 className="header">Pieces</h2>
-
+      <hr />
       <div className="metrics-container">
         {searchFilter.length > 1 ? (
           searchResults.map((item) => (
