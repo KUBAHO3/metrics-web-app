@@ -225,6 +225,7 @@ If you like this project please follow me on github & twitter and also connect o
 
 ## :pray: Acknowledgments <a name="acknowledgements"></a>
 - I would like to thank Microverse for this exercise. <br>
+- Credits of the wonderfull design used goes to [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) the [author of the original design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) thank you. <br>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -8,21 +8,20 @@ import '../styles/Home.css';
 
 function Home() {
   const dispatch = useDispatch();
-  const metrics = useSelector((store) => store.metrics.apiData);
-  const loading = useSelector((store) => store.metrics.isLoading);
+  const { apiData, isLoading } = useSelector((store) => store.metrics);
   const [searchFilter, setSearchFilter] = useState('');
   const [searchResults, setSearchResults] = useState('');
 
   const searchItems = (searchValue) => {
     setSearchFilter(searchValue);
     if (searchFilter !== '') {
-      const filteredData = metrics.filter((item) => Object.values(item.nameEU)
+      const filteredData = apiData.filter((item) => Object.values(item.nameEU)
         .join('')
         .toLowerCase()
         .includes(searchFilter.toLowerCase()));
       setSearchResults(filteredData);
     } else {
-      setSearchResults(metrics);
+      setSearchResults(apiData);
     }
   };
 
@@ -35,7 +34,7 @@ function Home() {
     dispatch(fetchDetailData(id));
   };
 
-  if (loading === false) {
+  if (isLoading === true) {
     return (
       <h1 style={{ marginLeft: '40px' }}>Loading...</h1>
     );
@@ -74,7 +73,7 @@ function Home() {
           ))
         ) : (
           <div className="metrics-container">
-            {metrics.map((item) => (
+            {apiData.map((item) => (
               <div key={item.id} className="metric-container">
                 <div className="detail-button">
                   <span role="button" tabIndex={0} id={item.id} onClick={(e) => clickHandler(e, item.id)} onKeyDown={(e) => clickHandler(e)}>
