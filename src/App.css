@@ -1,0 +1,8 @@
+.page-wraper {
+  background-color: brown;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+}
