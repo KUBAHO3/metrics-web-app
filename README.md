@@ -63,7 +63,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Metrics-web-app <a name="about-project"></a>
 
-This is a react and redux group project prepare as exercise in microverrse learning curriculum
+This is a React capstone project is about building a mobile web application to check a list of metrics (numeric values) that I will created making use of React and Redux.
 
 **Metrics-web-app** is a React-based project
 
@@ -120,7 +120,7 @@ This is a react and redux group project prepare as exercise in microverrse learn
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
--  Comming Soon...
+-  [Live link](https://feature--cool-raindrop-6d0239.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -128,7 +128,7 @@ This is a react and redux group project prepare as exercise in microverrse learn
 
 ## 🦻 WalkThrough Video <a name="#walkthrough-demo"></a>
 
--  Comming Soon...
+-  [WalkThrough link](https://www.loom.com/share/294f4538cea84267b04a239eb9155a8b)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -203,13 +203,6 @@ Not yet deployed ...
 - GitHub: [@KUBAHO3](https://github.com/KUBAHO3)
 - Twitter: [@KubahoH](https://twitter.com/KubahoH)
 - LinkedIn: [Kubaho Linne Heaven](https://www.linkedin.com/in/kubaho-linne-heaven-78ab37208/)
-
-
-
-:bust_in_silhouette: **Peter Akhigbe**
-- GitHub: [@peter-akhigbe](https://github.com/peter-akhigbe)
-- Gmail: [@Gmail](akhigbe37@gmail.com)
-- LinkedIn: [Peter Akhigbe](in/peter-akhigbe)
 
 <!-- FUTURE FEATURES -->
 
